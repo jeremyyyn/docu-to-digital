@@ -1,25 +1,75 @@
+import curtainDecoration from "@/assets/curtain-decoration.svg";
+import candleDecoration from "@/assets/candle-decoration.svg";
+import couplePhoto from "@/assets/couple-photo.webp";
+
 export const AboutUs = () => {
   return (
-    <section id="about" className="py-16 sm:py-24 px-4 bg-muted/30">
-      <div className="container mx-auto max-w-4xl">
-        <h2 className="text-4xl sm:text-5xl md:text-6xl font-light text-center mb-8 sm:mb-12 text-primary">
-          About Us
-        </h2>
-        
-        <div className="prose prose-lg max-w-none text-center">
-          <p className="text-base sm:text-lg text-foreground/80 leading-relaxed mb-6">
-            Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie 
-            consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan 
-            et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis 
-            dolore te feugait nulla facilisi.
-          </p>
-          
-          <p className="text-base sm:text-lg text-foreground/80 leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh 
-            euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad 
-            minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut 
-            aliquip ex ea commodo consequat.
-          </p>
+    <section id="about" className="py-20 px-4 relative" style={{ backgroundColor: '#515b46' }}>
+      {/* Curtain decoration at top */}
+      <div className="absolute top-0 left-0 right-0 w-full">
+        <img 
+          src={curtainDecoration} 
+          alt="" 
+          className="w-full h-auto"
+        />
+      </div>
+
+      <div className="container mx-auto max-w-6xl relative pt-20">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          {/* Left side - Oval frame with couple photo */}
+          <div className="flex justify-center">
+            <div className="relative">
+              {/* Oval border */}
+              <div className="absolute inset-0 border-2 rounded-[50%] border-[#fdf6ee]" 
+                   style={{ 
+                     width: '400px', 
+                     height: '600px',
+                     transform: 'translate(-50%, 0)',
+                     left: '50%'
+                   }}>
+              </div>
+              {/* Couple image */}
+              <img 
+                src={couplePhoto} 
+                alt="Joanne and Mun Keat" 
+                className="relative z-10 rounded-[50%] object-cover"
+                style={{ 
+                  width: '380px', 
+                  height: '580px',
+                  clipPath: 'ellipse(47% 48% at 50% 50%)'
+                }}
+              />
+            </div>
+          </div>
+
+          {/* Right side - Content */}
+          <div className="text-[#fdf6ee] flex flex-col items-center md:items-start">
+            {/* Candle decoration */}
+            <img 
+              src={candleDecoration} 
+              alt="" 
+              className="w-32 h-auto mb-8"
+            />
+            
+            {/* Date and Location */}
+            <h2 className="text-5xl sm:text-6xl md:text-7xl font-light mb-4 text-center md:text-left">
+              March 6th, 2026
+            </h2>
+            <p className="text-3xl sm:text-4xl font-light mb-8 text-center md:text-left">
+              La Chapelle, Bangkok
+            </p>
+            
+            {/* Description */}
+            <p className="text-base leading-relaxed text-center md:text-left max-w-xl">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod 
+              tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, 
+              quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo 
+              consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie 
+              consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto 
+              odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait 
+              nulla facilisi.
+            </p>
+          </div>
         </div>
       </div>
     </section>
