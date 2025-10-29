@@ -9,7 +9,7 @@ export const Hero = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#515b46] p-8 md:p-12 lg:p-16">
       {/* SVG Background */}
       <img 
         src={heroMain} 
@@ -18,28 +18,28 @@ export const Hero = () => {
       />
       
       {/* Navigation Buttons Overlay */}
-      <div className="absolute top-8 left-0 right-0 z-10 flex justify-center gap-4 px-4">
+      <div className="absolute top-8 left-0 right-0 z-10 flex justify-center gap-8 md:gap-12 px-4">
         <button
           onClick={() => scrollToSection("rsvp")}
-          className="px-6 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors text-sm uppercase tracking-wider"
+          className="text-[#515b46] hover:opacity-70 transition-opacity text-base md:text-lg font-medium"
         >
           RSVP
         </button>
         <button
           onClick={() => scrollToSection("itinerary")}
-          className="px-6 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors text-sm uppercase tracking-wider"
+          className="text-[#515b46] hover:opacity-70 transition-opacity text-base md:text-lg font-medium"
         >
           Itinerary
         </button>
         <button
           onClick={() => scrollToSection("dress-code")}
-          className="px-6 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors text-sm uppercase tracking-wider"
+          className="text-[#515b46] hover:opacity-70 transition-opacity text-base md:text-lg font-medium"
         >
           Dress Code
         </button>
         <button
           onClick={() => scrollToSection("about")}
-          className="px-6 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors text-sm uppercase tracking-wider"
+          className="text-[#515b46] hover:opacity-70 transition-opacity text-base md:text-lg font-medium"
         >
           About Us
         </button>
