@@ -1,6 +1,7 @@
 import curtainDecoration from "@/assets/curtain-decoration.svg";
 import candleDecoration from "@/assets/candle-decoration.svg";
 import couplePhoto from "@/assets/couple-photo.webp";
+import ovalFrame from "@/assets/oval-frame.svg";
 
 export const AboutUs = () => {
   return (
@@ -18,27 +19,32 @@ export const AboutUs = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left side - Oval frame with couple photo */}
           <div className="flex justify-center">
-            <div className="relative">
-              {/* Oval border */}
-              <div className="absolute inset-0 border-2 rounded-[50%] border-[#fdf6ee]" 
-                   style={{ 
-                     width: '400px', 
-                     height: '600px',
-                     transform: 'translate(-50%, 0)',
-                     left: '50%'
-                   }}>
-              </div>
-              {/* Couple image */}
+            <div className="relative w-full max-w-md">
+              {/* Oval frame SVG */}
               <img 
-                src={couplePhoto} 
-                alt="Joanne and Mun Keat" 
-                className="relative z-10 rounded-[50%] object-cover"
+                src={ovalFrame} 
+                alt="" 
+                className="absolute inset-0 w-full h-full"
                 style={{ 
-                  width: '380px', 
-                  height: '580px',
-                  clipPath: 'ellipse(47% 48% at 50% 50%)'
+                  maxWidth: '400px',
+                  margin: '0 auto'
                 }}
               />
+              {/* Couple image */}
+              <div className="relative flex justify-center items-center" style={{ paddingTop: '150%' }}>
+                <img 
+                  src={couplePhoto} 
+                  alt="Joanne and Mun Keat" 
+                  className="absolute object-cover"
+                  style={{ 
+                    width: '85%',
+                    height: '88%',
+                    top: '6%',
+                    left: '7.5%',
+                    clipPath: 'ellipse(47% 48% at 50% 50%)'
+                  }}
+                />
+              </div>
             </div>
           </div>
 
@@ -48,19 +54,19 @@ export const AboutUs = () => {
             <img 
               src={candleDecoration} 
               alt="" 
-              className="w-32 h-auto mb-8"
+              className="w-40 h-auto mb-6"
             />
             
             {/* Date and Location */}
-            <h2 className="text-5xl sm:text-6xl md:text-7xl font-light mb-4 text-center md:text-left">
+            <h2 className="text-5xl sm:text-6xl md:text-7xl font-light mb-2 text-center md:text-left">
               March 6th, 2026
             </h2>
-            <p className="text-3xl sm:text-4xl font-light mb-8 text-center md:text-left">
+            <p className="text-2xl sm:text-3xl font-light mb-8 text-center md:text-left">
               La Chapelle, Bangkok
             </p>
             
             {/* Description */}
-            <p className="text-base leading-relaxed text-center md:text-left max-w-xl">
+            <p className="text-sm leading-relaxed text-center md:text-left max-w-xl">
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod 
               tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, 
               quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo 
