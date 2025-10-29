@@ -5,12 +5,19 @@ import dressCode3 from "@/assets/dress-code-3.webp";
 import dressCode4 from "@/assets/dress-code-4.webp";
 import dressCode5 from "@/assets/dress-code-5.webp";
 import dressCode6 from "@/assets/dress-code-6.webp";
+import womensDressCode1 from "@/assets/womens-dress-code-1.webp";
+import mensLabel from "@/assets/mens-label.svg";
+import mensLabelActive from "@/assets/mens-label-active.svg";
+import womensLabel from "@/assets/womens-label.svg";
+import womensLabelActive from "@/assets/womens-label-active.svg";
 
 export const DressCode = () => {
   const [activeTab, setActiveTab] = useState<"mens" | "womens">("mens");
 
-  // For now, both sets use the same images
-  const images = [dressCode1, dressCode2, dressCode3, dressCode4, dressCode5, dressCode6];
+  const mensImages = [dressCode1, dressCode2, dressCode3, dressCode4, dressCode5, dressCode6];
+  const womensImages = [womensDressCode1, womensDressCode1, womensDressCode1, womensDressCode1, womensDressCode1, womensDressCode1];
+  
+  const images = activeTab === "mens" ? mensImages : womensImages;
 
   return (
     <section id="dress-code" className="py-16 sm:py-24 px-4" style={{ backgroundColor: '#fdf6ee' }}>
@@ -22,39 +29,37 @@ export const DressCode = () => {
               Dress Code
             </h2>
             
-            <div className="flex flex-col gap-3 w-full max-w-[220px]">
+            <div className="flex flex-col gap-4 w-full max-w-[240px]">
               <button
                 onClick={() => setActiveTab("mens")}
-                className={`px-8 py-3 rounded-md text-lg font-light transition-colors ${
-                  activeTab === "mens"
-                    ? "text-[#fdf6ee]"
-                    : "bg-transparent text-[#515b46] border-2"
-                }`}
-                style={activeTab === "mens" ? { backgroundColor: '#515b46' } : { borderColor: '#515b46' }}
+                className="transition-opacity hover:opacity-80"
               >
-                Mens
+                <img 
+                  src={activeTab === "mens" ? mensLabelActive : mensLabel} 
+                  alt="Mens" 
+                  className="w-full"
+                />
               </button>
               
               <button
                 onClick={() => setActiveTab("womens")}
-                className={`px-8 py-3 rounded-md text-lg font-light transition-colors ${
-                  activeTab === "womens"
-                    ? "text-[#fdf6ee]"
-                    : "bg-transparent text-[#515b46] border-2"
-                }`}
-                style={activeTab === "womens" ? { backgroundColor: '#515b46' } : { borderColor: '#515b46' }}
+                className="transition-opacity hover:opacity-80"
               >
-                Womens
+                <img 
+                  src={activeTab === "womens" ? womensLabelActive : womensLabel} 
+                  alt="Womens" 
+                  className="w-full"
+                />
               </button>
             </div>
           </div>
 
           {/* Right side - Image Grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 sm:gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3">
             {images.map((img, index) => (
               <div
                 key={index}
-                className="aspect-[3/4] overflow-hidden rounded-lg"
+                className="aspect-[3/4] overflow-hidden"
               >
                 <img
                   src={img}
