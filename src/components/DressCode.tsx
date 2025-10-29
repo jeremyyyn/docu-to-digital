@@ -22,14 +22,14 @@ export const DressCode = () => {
   return (
     <section id="dress-code" className="py-16 sm:py-24 px-4" style={{ backgroundColor: '#fdf6ee' }}>
       <div className="container mx-auto max-w-7xl">
-        <div className="grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-8 lg:gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-[250px_1fr] gap-8 lg:gap-12 items-start">
           {/* Left side - Title and Buttons */}
-          <div className="flex flex-col items-center lg:items-start space-y-6">
-            <h2 className="text-5xl sm:text-6xl md:text-7xl font-light text-center lg:text-left" style={{ color: '#515b46' }}>
+          <div className="flex flex-col items-start space-y-8">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-light" style={{ color: '#515b46' }}>
               Dress Code
             </h2>
             
-            <div className="flex flex-col gap-4 w-full max-w-[240px]">
+            <div className="flex flex-col gap-2 w-full max-w-[180px]">
               <button
                 onClick={() => setActiveTab("mens")}
                 className="transition-opacity hover:opacity-80"
