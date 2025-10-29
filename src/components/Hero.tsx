@@ -9,7 +9,7 @@ export const Hero = () => {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#515b46] p-8 md:p-12 lg:p-16">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#515b46] pt-2 px-2 pb-8 md:pt-2 md:px-2 md:pb-12 lg:pt-3 lg:px-3 lg:pb-16">
       {/* SVG Background */}
       <img 
         src={heroMain} 
@@ -18,7 +18,7 @@ export const Hero = () => {
       />
       
       {/* Navigation Buttons Overlay */}
-      <div className="absolute top-8 left-0 right-0 z-10 flex justify-center gap-8 md:gap-12 px-4">
+      <div className="absolute top-1/2 left-0 right-0 z-10 flex justify-center gap-8 md:gap-12 px-4 -translate-y-1/2">
         <button
           onClick={() => scrollToSection("rsvp")}
           className="text-[#515b46] hover:opacity-70 transition-opacity text-base md:text-lg font-medium"
