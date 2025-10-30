@@ -10,20 +10,19 @@ export const HotelRecommendations = () => {
   ];
 
   return (
-    <section id="hotels" className="py-16 sm:py-24 px-4" style={{ backgroundColor: '#fdf6ee' }}>
-      <div className="container mx-auto max-w-7xl">
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-start">
-          {/* Left side - Hotel Image */}
-          <div className="w-full">
-            <img
-              src={hotelInterior}
-              alt="Oriental Residence Bangkok Interior"
-              className="w-full h-auto object-cover"
-            />
-          </div>
+    <section id="hotels" className="py-16 sm:py-24" style={{ backgroundColor: '#fdf6ee' }}>
+      <div className="flex flex-col md:flex-row">
+        {/* Left side - Hotel Image (60%) */}
+        <div className="w-full md:w-[60%]">
+          <img
+            src={hotelInterior}
+            alt="Oriental Residence Bangkok Interior"
+            className="w-full h-[500px] md:h-[700px] object-cover"
+          />
+        </div>
 
-          {/* Right side - Content */}
-          <div className="space-y-6">
+        {/* Right side - Content (40%) */}
+        <div className="w-full md:w-[40%] px-6 sm:px-8 lg:px-12 py-8 md:py-12 space-y-6">
             <div>
               <h2 className="text-4xl sm:text-5xl lg:text-6xl font-light mb-2" style={{ color: '#515b46' }}>
                 Oriental Residences Bangkok
@@ -80,7 +79,6 @@ export const HotelRecommendations = () => {
                 and quote <strong>"Mun Keat and Joanne Wedding"</strong> to enjoy the following rates.
               </p>
             </div>
-          </div>
         </div>
       </div>
     </section>
