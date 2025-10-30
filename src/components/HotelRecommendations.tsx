@@ -17,12 +17,12 @@ export const HotelRecommendations = () => {
           <img
             src={hotelInterior}
             alt="Oriental Residence Bangkok Interior"
-            className="w-full h-[500px] md:h-[700px] object-cover"
+            className="w-full h-[600px] md:h-[850px] lg:h-[900px] object-cover"
           />
         </div>
 
         {/* Right side - Content (40%) */}
-        <div className="w-full md:w-[40%] px-6 sm:px-8 lg:px-12 py-8 md:py-12 space-y-6">
+        <div className="w-full md:w-[40%] px-6 sm:px-8 lg:px-12 py-8 md:py-12 space-y-4">
             <div>
               <h2 className="text-4xl sm:text-5xl lg:text-6xl font-light mb-2" style={{ color: '#515b46' }}>
                 Oriental Residences Bangkok
@@ -33,7 +33,7 @@ export const HotelRecommendations = () => {
             </div>
 
             {/* Decorative leaf element */}
-            <div className="py-4">
+            <div className="py-2">
               <svg width="80" height="30" viewBox="0 0 80 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10 15C10 15 15 10 20 15C25 20 30 15 35 15C40 15 45 20 50 15C55 10 60 15 65 15C70 15 75 10 80 15" stroke="#515b46" strokeWidth="1.5" fill="none"/>
                 <ellipse cx="12" cy="10" rx="3" ry="5" fill="#515b46" opacity="0.3"/>
@@ -44,7 +44,7 @@ export const HotelRecommendations = () => {
             </div>
 
             {/* Room listings */}
-            <div className="space-y-4">
+            <div className="space-y-2">
               {rooms.map((room, index) => (
                 <div key={index} className="space-y-1">
                   <p className="text-base sm:text-lg" style={{ color: '#515b46' }}>
@@ -58,7 +58,7 @@ export const HotelRecommendations = () => {
             </div>
 
             {/* Contact information */}
-            <div className="pt-6 space-y-2">
+            <div className="pt-4 space-y-2">
               <p className="text-sm sm:text-base" style={{ color: '#515b46' }}>
                 Rates are available till 15 December 2025. Kindly please email:{" "}
                 <a
