@@ -5,7 +5,7 @@ import ovalFrame from "@/assets/oval-frame.svg";
 
 export const AboutUs = () => {
   return (
-    <section id="about" className="py-20 px-4 relative" style={{ backgroundColor: '#515b46' }}>
+    <section id="about" className="py-12 sm:py-16 md:py-20 px-4 relative" style={{ backgroundColor: '#515b46' }}>
       {/* Curtain decoration at top */}
       <div className="absolute top-0 left-0 right-0 w-full">
         <img 
@@ -15,11 +15,11 @@ export const AboutUs = () => {
         />
       </div>
 
-      <div className="container mx-auto max-w-6xl relative pt-20">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto max-w-6xl relative pt-12 sm:pt-16 md:pt-20">
+        <div className="grid md:grid-cols-2 gap-8 sm:gap-12 items-center">
           {/* Left side - Oval frame with couple photo */}
-          <div className="flex justify-center md:-translate-x-[120px]">
-            <div className="relative w-full max-w-md">
+          <div className="flex justify-center lg:-translate-x-[120px]">
+            <div className="relative w-full max-w-[280px] sm:max-w-md mx-auto">
               {/* Oval frame SVG */}
               <img 
                 src={ovalFrame} 
@@ -49,24 +49,24 @@ export const AboutUs = () => {
           </div>
 
           {/* Right side - Content */}
-          <div className="text-[#fdf6ee] flex flex-col items-center md:items-start">
+          <div className="text-[#fdf6ee] flex flex-col items-center md:items-start px-4 sm:px-0">
             {/* Candle decoration */}
             <img 
               src={candleDecoration} 
               alt="" 
-              className="w-40 h-auto mb-6"
+              className="w-32 sm:w-40 h-auto mb-4 sm:mb-6"
             />
             
             {/* Date and Location */}
-            <h2 className="text-5xl sm:text-6xl md:text-7xl font-light mb-2 text-center md:text-left">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-light mb-2 text-center md:text-left">
               March 6th, 2026
             </h2>
-            <p className="text-2xl sm:text-3xl font-light mb-8 text-center md:text-left">
+            <p className="text-xl sm:text-2xl md:text-3xl font-light mb-6 sm:mb-8 text-center md:text-left">
               La Chapelle, Bangkok
             </p>
             
             {/* Description */}
-            <p className="text-sm leading-relaxed text-center md:text-left max-w-xl">
+            <p className="text-xs sm:text-sm leading-relaxed text-center md:text-left max-w-xl">
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod 
               tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, 
               quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo 

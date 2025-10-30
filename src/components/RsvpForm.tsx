@@ -41,13 +41,13 @@ export const RsvpForm = () => {
   };
 
   return (
-    <section id="rsvp" className="py-16 sm:py-24 px-4 bg-muted/30">
+    <section id="rsvp" className="py-12 sm:py-16 md:py-24 px-4 bg-muted/30">
       <div className="container mx-auto max-w-2xl">
-        <h2 className="text-4xl sm:text-5xl md:text-6xl font-light text-center mb-8 sm:mb-12 text-primary">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-center mb-6 sm:mb-8 md:mb-12 text-primary">
           RSVP
         </h2>
 
-        <div className="bg-card p-6 sm:p-10 rounded-lg border border-border shadow-lg">
+        <div className="bg-card p-4 sm:p-6 md:p-10 rounded-lg border border-border shadow-lg">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="space-y-2">
               <Label htmlFor="name" className="text-base">
@@ -211,7 +211,7 @@ export const RsvpForm = () => {
           </form>
         </div>
 
-        <p className="text-center text-sm text-muted-foreground mt-8">
+        <p className="text-center text-xs sm:text-sm text-muted-foreground mt-6 sm:mt-8 px-2">
           Thank you for taking the time to RSVP! We can't wait to celebrate this joyful occasion with you.
         </p>
       </div>

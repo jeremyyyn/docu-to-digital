@@ -20,19 +20,19 @@ export const DressCode = () => {
   const images = activeTab === "mens" ? mensImages : womensImages;
 
   return (
-    <section id="dress-code" className="py-16 sm:py-24 px-4" style={{ backgroundColor: '#fdf6ee' }}>
+    <section id="dress-code" className="py-12 sm:py-16 md:py-24 px-4" style={{ backgroundColor: '#fdf6ee' }}>
       <div className="container mx-auto max-w-7xl">
-        <div className="grid grid-cols-1 lg:grid-cols-[250px_1fr] gap-8 lg:gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-[250px_1fr] gap-6 sm:gap-8 lg:gap-12 items-start">
           {/* Left side - Title and Buttons */}
-          <div className="flex flex-col items-start space-y-8">
+          <div className="flex flex-col items-center lg:items-start space-y-6 sm:space-y-8">
             <h2
-              className="text-4xl sm:text-5xl md:text-6xl font-light whitespace-nowrap"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light text-center lg:text-left"
               style={{ color: '#515b46' }}
             >
               Dress Code
             </h2>
             
-            <div className="flex flex-col gap-6 w-full max-w-[180px] ml-16">
+            <div className="flex flex-row lg:flex-col gap-4 sm:gap-6 w-full max-w-[360px] lg:max-w-[180px] justify-center lg:justify-start lg:ml-16">
 
               <button
                 onClick={() => setActiveTab("mens")}
@@ -59,7 +59,7 @@ export const DressCode = () => {
           </div>
 
           {/* Right side - Image Grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3 md:gap-4">
             {images.map((img, index) => (
               <div
                 key={index}

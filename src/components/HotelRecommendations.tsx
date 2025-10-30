@@ -10,31 +10,31 @@ export const HotelRecommendations = () => {
   ];
 
   return (
-    <section id="hotels" className="py-16 sm:py-24" style={{ backgroundColor: '#fdf6ee' }}>
+    <section id="hotels" className="py-12 sm:py-16 md:py-24" style={{ backgroundColor: '#fdf6ee' }}>
       <div className="flex flex-col md:flex-row">
         {/* Left side - Hotel Image (60%) */}
         <div className="w-full md:w-[60%]">
           <img
             src={hotelInterior}
             alt="Oriental Residence Bangkok Interior"
-            className="w-full h-[600px] md:h-[850px] lg:h-[900px] object-cover"
+            className="w-full h-[400px] sm:h-[500px] md:h-[700px] lg:h-[850px] xl:h-[900px] object-cover"
           />
         </div>
 
         {/* Right side - Content (40%) */}
-        <div className="w-full md:w-[40%] px-6 sm:px-8 lg:px-12 py-8 md:py-12 space-y-4">
+        <div className="w-full md:w-[40%] px-4 sm:px-6 md:px-8 lg:px-12 py-6 sm:py-8 md:py-12 space-y-3 sm:space-y-4">
             <div>
-              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-light mb-2" style={{ color: '#515b46' }}>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light mb-2" style={{ color: '#515b46' }}>
                 Oriental Residences Bangkok
               </h2>
-              <p className="text-xl sm:text-2xl font-light" style={{ color: '#515b46' }}>
+              <p className="text-lg sm:text-xl md:text-2xl font-light" style={{ color: '#515b46' }}>
                 Hotel Recommendation
               </p>
             </div>
 
             {/* Decorative leaf element */}
-            <div className="py-2">
-              <svg width="80" height="30" viewBox="0 0 80 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div className="py-1 sm:py-2">
+              <svg className="w-16 sm:w-20 h-auto" viewBox="0 0 80 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10 15C10 15 15 10 20 15C25 20 30 15 35 15C40 15 45 20 50 15C55 10 60 15 65 15C70 15 75 10 80 15" stroke="#515b46" strokeWidth="1.5" fill="none"/>
                 <ellipse cx="12" cy="10" rx="3" ry="5" fill="#515b46" opacity="0.3"/>
                 <ellipse cx="28" cy="20" rx="3" ry="5" fill="#515b46" opacity="0.3"/>
@@ -44,13 +44,13 @@ export const HotelRecommendations = () => {
             </div>
 
             {/* Room listings */}
-            <div className="space-y-2">
+            <div className="space-y-1.5 sm:space-y-2">
               {rooms.map((room, index) => (
-                <div key={index} className="space-y-1">
-                  <p className="text-base sm:text-lg" style={{ color: '#515b46' }}>
+                <div key={index} className="space-y-0.5 sm:space-y-1">
+                  <p className="text-sm sm:text-base md:text-lg" style={{ color: '#515b46' }}>
                     <span className="font-medium">{room.type}</span> | <span className="font-medium">{room.rate}</span>
                   </p>
-                  <p className="text-sm text-foreground/60">
+                  <p className="text-xs sm:text-sm text-foreground/60">
                     incl. daily breakfast for 1-2 persons per room per night
                   </p>
                 </div>
@@ -58,8 +58,8 @@ export const HotelRecommendations = () => {
             </div>
 
             {/* Contact information */}
-            <div className="pt-4 space-y-2">
-              <p className="text-sm sm:text-base" style={{ color: '#515b46' }}>
+            <div className="pt-3 sm:pt-4 space-y-2">
+              <p className="text-xs sm:text-sm md:text-base" style={{ color: '#515b46' }}>
                 Rates are available till 15 December 2025. Kindly please email:{" "}
                 <a
                   href="mailto:reservations.oriental@oriental-residence.com"
