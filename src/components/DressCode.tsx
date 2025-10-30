@@ -25,31 +25,35 @@ export const DressCode = () => {
         <div className="grid grid-cols-1 lg:grid-cols-[250px_1fr] gap-8 lg:gap-12 items-start">
           {/* Left side - Title and Buttons */}
           <div className="flex flex-col items-start space-y-8">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-light" style={{ color: '#515b46' }}>
+            <h2
+              className="text-4xl sm:text-5xl md:text-6xl font-light whitespace-nowrap"
+              style={{ color: '#515b46' }}
+            >
               Dress Code
             </h2>
             
-            <div className="flex flex-col gap-2 w-full max-w-[180px]">
+            <div className="flex flex-col gap-6 w-full max-w-[180px] ml-16">
+
               <button
                 onClick={() => setActiveTab("mens")}
                 className="transition-opacity hover:opacity-80"
               >
-                <img 
-                  src={activeTab === "mens" ? mensLabelActive : mensLabel} 
-                  alt="Mens" 
-                  className="w-full"
-                />
+              <img 
+                src={activeTab === "mens" ? mensLabel : mensLabelActive} 
+                alt="Mens" 
+                className="w-full"
+              />
               </button>
               
               <button
                 onClick={() => setActiveTab("womens")}
                 className="transition-opacity hover:opacity-80"
               >
-                <img 
-                  src={activeTab === "womens" ? womensLabelActive : womensLabel} 
-                  alt="Womens" 
-                  className="w-full"
-                />
+              <img 
+                src={activeTab === "womens" ? womensLabel : womensLabelActive} 
+                alt="Womens" 
+                className="w-full"
+              />
               </button>
             </div>
           </div>

@@ -18,7 +18,7 @@ export const AboutUs = () => {
       <div className="container mx-auto max-w-6xl relative pt-20">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left side - Oval frame with couple photo */}
-          <div className="flex justify-center">
+          <div className="flex justify-center md:-translate-x-[120px]">
             <div className="relative w-full max-w-md">
               {/* Oval frame SVG */}
               <img 

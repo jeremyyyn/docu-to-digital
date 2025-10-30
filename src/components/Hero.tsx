@@ -18,7 +18,8 @@ export const Hero = () => {
       />
       
       {/* Navigation Buttons Overlay */}
-      <div className="absolute top-1/2 left-0 right-0 z-10 flex justify-center gap-8 md:gap-12 px-4 -translate-y-1/2">
+      <div className="absolute top-12 left-8 right-0 z-10 flex justify-center gap-24 md:gap-32 px-4">
+
         <button
           onClick={() => scrollToSection("rsvp")}
           className="text-[#515b46] hover:opacity-70 transition-opacity text-base md:text-lg font-medium"
@@ -31,12 +32,13 @@ export const Hero = () => {
         >
           Itinerary
         </button>
-        <button
-          onClick={() => scrollToSection("dress-code")}
-          className="text-[#515b46] hover:opacity-70 transition-opacity text-base md:text-lg font-medium"
-        >
-          Dress Code
-        </button>
+<button
+  onClick={() => scrollToSection("dress-code")}
+  className="text-[#515b46] hover:opacity-70 transition-opacity text-base md:text-lg font-medium ml-28"
+>
+  Dress Code
+</button>
+
         <button
           onClick={() => scrollToSection("about")}
           className="text-[#515b46] hover:opacity-70 transition-opacity text-base md:text-lg font-medium"
