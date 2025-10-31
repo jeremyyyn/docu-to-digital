@@ -17,7 +17,7 @@ export const Hero = () => {
   return (
     <section 
       id="hero" 
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#515B46] p-8"
       style={{
         backgroundImage: `url(${heroBackground})`,
         backgroundSize: 'cover',
@@ -29,64 +29,64 @@ export const Hero = () => {
       <img 
         src={topLeft} 
         alt="" 
-        className="absolute top-0 left-0 w-24 sm:w-32 md:w-40 lg:w-48 h-auto"
+        className="absolute top-8 left-8 w-[120px] h-auto"
       />
       <img 
         src={topRight} 
         alt="" 
-        className="absolute top-0 right-0 w-24 sm:w-32 md:w-40 lg:w-48 h-auto"
+        className="absolute top-8 right-8 w-[120px] h-auto"
       />
       <img 
         src={bottomLeft} 
         alt="" 
-        className="absolute bottom-0 left-0 w-24 sm:w-32 md:w-40 lg:w-48 h-auto"
+        className="absolute bottom-8 left-8 w-[120px] h-auto"
       />
       <img 
         src={bottomRight} 
         alt="" 
-        className="absolute bottom-0 right-0 w-24 sm:w-32 md:w-40 lg:w-48 h-auto"
+        className="absolute bottom-8 right-8 w-[120px] h-auto"
       />
       
       {/* Center Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center gap-8 sm:gap-12 md:gap-16 px-4">
+      <div className="relative z-10 flex flex-col items-center justify-center gap-12 w-full max-w-6xl mx-auto">
         {/* Logo */}
         <img 
           src={logo} 
           alt="MJ Logo" 
-          className="w-12 sm:w-16 md:w-20 lg:w-24 h-auto"
+          className="w-[64px] h-auto"
         />
         
         {/* Names */}
         <img 
           src={namesText} 
           alt="Mun Keat and Joanne" 
-          className="w-full max-w-xl sm:max-w-2xl md:max-w-3xl lg:max-w-4xl h-auto"
+          className="w-full max-w-[800px] h-auto mx-auto"
         />
       </div>
       
       {/* Navigation Buttons Overlay */}
-      <div className="absolute top-8 sm:top-12 left-0 right-0 z-20 flex justify-center gap-4 sm:gap-8 md:gap-16 lg:gap-24 xl:gap-32 px-2 sm:px-4 flex-wrap">
+      <div className="absolute top-8 left-8 right-8 z-20 flex justify-center gap-16 px-4">
         <button
           onClick={() => scrollToSection("rsvp")}
-          className="text-[#515b46] hover:opacity-70 transition-opacity text-xs sm:text-sm md:text-base lg:text-lg font-medium"
+          className="text-[#515b46] hover:opacity-70 transition-opacity text-base font-medium"
         >
           RSVP
         </button>
         <button
           onClick={() => scrollToSection("itinerary")}
-          className="text-[#515b46] hover:opacity-70 transition-opacity text-xs sm:text-sm md:text-base lg:text-lg font-medium"
+          className="text-[#515b46] hover:opacity-70 transition-opacity text-base font-medium"
         >
           Itinerary
         </button>
         <button
           onClick={() => scrollToSection("dress-code")}
-          className="text-[#515b46] hover:opacity-70 transition-opacity text-xs sm:text-sm md:text-base lg:text-lg font-medium"
+          className="text-[#515b46] hover:opacity-70 transition-opacity text-base font-medium"
         >
           Dress Code
         </button>
         <button
           onClick={() => scrollToSection("about")}
-          className="text-[#515b46] hover:opacity-70 transition-opacity text-xs sm:text-sm md:text-base lg:text-lg font-medium"
+          className="text-[#515b46] hover:opacity-70 transition-opacity text-base font-medium"
         >
           About Us
         </button>
